@@ -13,15 +13,7 @@ mainUrls = ["https://www.newegg.com/Product/ProductList.aspx?Submit=ENE&N=100007
 #what values to add to the rows
 keys = ['price','Brand','GPU','GPU Series', 'Model','Chipset Manufacturer','Memory Size']
 
-def timeManager(index):
-	print index
-	if(index < 2): 
-		index = index + 1
-		Timer(2.0, timeManager(index),()).start()
-		url = urls[index].find('a',attrs={'class':'item-title'})['href']
-		copyDataForURL(url)
-	else:
-		timer.cancel()
+
 
 def copyDataForURL(URL,price):
 	URL = URL + "&recaptcha=pass"
